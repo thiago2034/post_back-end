@@ -12,13 +12,43 @@ public class PostModel {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long ID;
 
-    @Column(name ="title")
-    private String Title;
+    @Column(name ="Cliente")
+    private String cliente;
 
- 
-    
-    @Column(name = "text")
-    private String Text;
+    @Column(name = "Plano")
+    private String Plano;
+
+
+    @Column(name = "Endereço")
+    private String Endereço;
+
+    @Column(name = "Telefone")
+    private String Telefone;
+
+    public String getEndereço() {
+        return Endereço;
+    }
+    public String getPlano() {
+        return Plano;
+    }
+
+    public void setPlano(String plano) {
+        Plano = plano;
+    }
+
+    public void setEndereço(String endereço) {
+        Endereço = endereço;
+    }
+
+    public String getTelefone() {
+        return Telefone;
+    }
+
+    public void setTelefone(String telefone) {
+        Telefone = telefone;
+    }
+
+
 
     public PostModel(){
 
@@ -32,19 +62,12 @@ public class PostModel {
     }
 
     public String getTitle() {
-        return Title;
+        return cliente;
     }
 
-    public void setTitle(String Title) {
-        this.Title = Title;
+    public void setTitle(String cliente) {
+        this.cliente = cliente;
     }
 
-    public String getText() {
-        return Text;
-    }
-
-    public void setText(String Text) {
-        this.Text = Text;
-    }
     
 }

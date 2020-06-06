@@ -33,8 +33,8 @@ public class PostController {
     }
 
     @PostMapping(path = "/post/create")
-        public void criarPost(@RequestBody PostModel post) {
-            postRepository.save(post);
+    public void criarPost(@RequestBody PostModel post) {
+        postRepository.save(post);
     }
 
     @DeleteMapping(path = "post/delete/{id}")
